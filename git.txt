@@ -1,0 +1,20 @@
+// Inicjalizacja repozytorium
+git init
+
+// Dodaje do indeksu wszystkie nowe zmienne, usuniete pliki w bierzacym jego katalogu i wszystkich jego podkatalogach
+git add .
+
+// Dodaje do indeksu wszystkie nowe, zmienne, usuniete pliki w całym repozytorium
+git add -A
+
+// Zatwierdza zmiany opisane wiadomością "Pierwszy commit"
+git commit -m "Pierwszy commit"
+
+// Zmienia nazwę bieżącej gałęzi na "main". Flaga -M nadpisuje gałąź o nazwie main
+git branch -M main
+
+//Dodaje zdalne repozytorium o nazwie "origin" (nazwa jest dowolna) z adresem URL. Projekt może mieć wiecej niż 1 repozytorium.
+git remote add origin https://github.com/maciek1989pl/FD_Maciej_Miarka.git
+
+// Polecenie do przesyłania/wypychania zmian na zdalny branch main
+git push origin main
