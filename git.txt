@@ -18,3 +18,12 @@ git remote add origin https://github.com/maciek1989pl/FD_Maciej_Miarka.git
 
 // Polecenie do przesyłania/wypychania zmian na zdalny branch main
 git push origin main
+
+// Tworzenie nowego brancha i zmiana na niego
+git checkout -b nazwa_brancha
+
+// Sprawdzanie jakie sa zdalne repozytoria wraz z adresami
+git remote -v
+
+// Pobranie zmian z brancha nazwa_brancha
+git pull origin nazwa_brancha
