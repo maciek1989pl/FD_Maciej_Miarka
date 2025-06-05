@@ -1,3 +1,7 @@
+// Konfiguracja użytkownika Gita
+git config --global user.name "Maciej Miarka"
+git config --global user.email "mmiarka.pl@gmail.com"
+
 // Inicjalizacja repozytorium
 git init
 
@@ -33,11 +37,44 @@ ssh keygen
 
 // Zmiana adresu URL repozytorium
 git remote set-url origin new_URL
-git remote set-url git@github.com:maciek1989pl/FD_Maciej_Miarka.git (SSH)
+np. git remote set-url git@github.com:maciek1989pl/FD_Maciej_Miarka.git (SSH)
 
 // Tworzenie nowego brancha (ale nie przełącza się na nią)
 git branch nazwa_brancha
 
 // Połączenie znian z gałęzi lokalnej do main, który również jest zdalny
 git merge nazwa_brancha
+
+// Cofanie kilku commitów
+git revert stary_hash^..nowy_hash
+np. git revert 0e74427862850bf2deae4a2ffd9ba7212a29d75d^..a625bc13fe8300ce52bfe309fcdcd89c3562d8b7
+
+   Dodanie flagi --hard (przywróci stan repozytorium do "momentu" wskazanego commita, ale przy tym usunie historię)
+git revert --hard HASH
+np. git revert --hard 0e74427862850bf2deae4a2ffd9ba7212a29d75d
+
+// Jeśli masz w trakcie jakieś niezakomitowane zmiany i chcesz je tymczasowo schować 
+git stash 
+
+   Aby zobaczyć listę wszystkich zapisanych zmian
+git stash list
+
+   Jeśli chcesz przywrócić zmiany z ostatniego schowka
+git stash apply
+
+   Aby przywrócić zmiany z komkretnego schowka
+git stash apply stash@{n}
+
+   Jeśli chcesz przywrócić konkretny schowek
+git stash pop stash@{n}
+
+   Jeśli chcesz usunąć konkretny schowek bez przywracania zmian
+git stash drop stash@{n}
+
+   Jeżeli chcesz wyczyścić całą listę schowków
+git stash clear
+
+   Jeżeli chcesz dodać krótki opis do Twojego schowka
+git stash save "wiadomość"
+
 
