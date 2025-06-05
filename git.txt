@@ -27,3 +27,17 @@ git remote -v
 
 // Pobranie zmian z brancha nazwa_brancha
 git pull origin nazwa_brancha
+
+// Polecenie do generowania klucza SSH
+ssh keygen
+
+// Zmiana adresu URL repozytorium
+git remote set-url origin new_URL
+git remote set-url git@github.com:maciek1989pl/FD_Maciej_Miarka.git (SSH)
+
+// Tworzenie nowego brancha (ale nie przełącza się na nią)
+git branch nazwa_brancha
+
+// Połączenie znian z gałęzi lokalnej do main, który również jest zdalny
+git merge nazwa_brancha
+
