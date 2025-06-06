@@ -64,15 +64,15 @@ class Library:
     def edit_book(self, book_id, author = None, title = None, year_of_release = None, pages = None, amount = None):
         if book_id in self.books:
             if author is not None:
-                self.books['book_id']['author'] = author
+                self.books[book_id]['author'] = author
             if title is not None:
-                self.books['book_id']['title'] = title
+                self.books[book_id]['title'] = title
             if year_of_release is not None:
-                self.books['book_id']['year_of_release'] = year_of_release
+                self.books[book_id]['year_of_release'] = year_of_release
             if pages is not None:
-                self.books['book_id']['pages'] = pages
+                self.books[book_id]['pages'] = pages
             if amount is not None:
-                self.books['book_id']['amount'] = amount
+                self.books[book_id]['amount'] = amount
             print(f"Zaktualizowano książkę o ID {book_id}.")
         else:
             print(f"Książka o ID {book_id} nie istnieje.")
@@ -82,6 +82,13 @@ class Library:
             removed_book = self.books.pop(book_id)
             print(f"Usunięto książkę o ID {book_id}: '{removed_book['title']}'")
         else:
-            print(f"Książką o ID {book_id} nie istnieje.")        
+            print(f"Książką o ID {book_id} nie istnieje.")
+
+
+
+lib = Library(books)
+lib.edit_book('ID25', amount= 5)
+print(books)
+
 
 
