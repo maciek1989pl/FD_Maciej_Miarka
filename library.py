@@ -1,9 +1,9 @@
-from books import Book, books
+from books import Book
 
 
 class Library:
-    def __init__(self):
-        self.books = {}
+    def __init__(self, books):
+        self.books = books
 
     def add_book(self, book_id, author, title, year_of_release, pages, amount):
         if book_id in self.books:
